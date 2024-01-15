@@ -1,0 +1,231 @@
+<html lang="Russia">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>KINGS TAXI</title>
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="icon" type="image/icon" href="/img/Логовкладка.png">
+    </head>
+<body>
+<!-- Навигация по сайту -->
+  <header>
+    <nav class="header__nav">
+      <ul class="menu header__menu">
+        <li class="menu__item menu__logo">
+          <a href="/index.php" class="menu__link logo__item">
+            <div class="Logo">
+              <img src="/img/лого.png" alt="Логотип">
+            </div>
+          </a>
+          <div class="telephone logo__item">
+            +7 (999) 666 66 43
+          </div>
+        </li>
+       
+        <li class="menu__item"><a href="./feedback.html#user__info" class="menu__link">Пользавателям</a></li>
+        <li class="menu__item"><a href="./feedback.html#driver__info" class="menu__link">Водителям</a></li>
+        <li class="menu__item"><a href="./feedback.html#business__info" class="menu__link">Бизнесу</a></li>
+        <button class="menu__item button__item">  
+          <div class="input__logo">
+            <img src="/img/иконкачела.png" alt="Иконкачела">
+          </div>
+          <div class="input__text">
+            <a href="./acount/account.php">Вход</a>
+          </div>
+        </button>
+      </ul>
+    </nav>
+  </header>
+
+  
+  <!-- Форма поездки -->
+  <form action="check_acc.php" method="POST">
+    <div class="ride__info">
+      <!-- Местоположеине -->
+      <div class="location">
+        <div class="location__in">
+          <div class="icon__location_in">
+            <img src="/img/in-icon.png" alt="" style="width: 65%;margin: 0px 0 0 8px;">
+          </div>
+          <!-- Форма заполнения куда -->
+          <div class="form__location__in">
+            <div class="location__in__text">
+              <input type="text" placeholder="Куда?" name="locationIn" class="location__in__text__block" onclick="FincClickIn()" required>
+            </div>
+            <div class="line__location1" id="clickLineIn">
+            </div>
+          </div>
+        </div>
+
+        <script>
+          function FincClickIn() {
+            document.getElementById("clickLineIn").classList.toggle("click__line__transform");
+          }
+          // Анимация при клике формы местоположения
+        </script>
+
+        <div class="location__out">
+          <div class="icon__location_out">
+            <img src="/img/out-icon.png" alt=""  style="width: 65%; margin: 0px 0 0 8px;">
+          </div>
+          <!-- Форма заполнения откуда -->
+          <div class="form__location__out">
+            <div class="location__out__text">
+              <input type="text" placeholder="Откуда?" name="locationOut" class="location__in__text__block" onclick="FincClickOut()" required>
+            </div>
+            <div class="line__location2" id="clickLineOut">
+            </div>
+          </div>
+        </div>
+        <script>
+          function FincClickOut() {
+            document.getElementById("clickLineOut").classList.toggle("click__line__transform");
+          }
+        </script>
+
+      </div>
+      <!-- Выбор класса такси -->
+
+      <div class="class__taxi">
+        <button class="btn__class__taxi" id="econom"> 
+          <div class="card__item">
+            <img src="/img/Такси Иконка1.png" alt="" style="margin-bottom: 3px;">
+            <p class="text__cost__class__taxi">
+              Эконом<br> <span class="cost__class__taxi"> от 149 
+                <img class="rybl_style" src="/img/Ryb.png" style="margin-left: 0px;"> </span>
+            </p>
+          </div>
+        </button>
+
+        <button class="btn__class__taxi" id="standard"> 
+          <div class="card__item" style="margin-top: 3px;">
+            <img src="/img/Такси Иконка2.png" alt="" style="margin-bottom: 3px;">
+            <p class="text__cost__class__taxi">
+              Стандарт<br> <span class="cost__class__taxi"> от 199 
+                <img class="rybl_style" src="/img/Ryb.png" style="margin-left: 0px;"> </span>
+            </p>
+          </div>
+        </button>
+
+        <button class="btn__class__taxi" id="comfort"> 
+          <div class="card__item" style="margin-top: 3px;">
+            <img src="/img/Такси Иконка3.png" alt="" style="margin-bottom: 3px;">
+            <p class="text__cost__class__taxi">
+              Комфорт<br> <span class="cost__class__taxi"> от 219 
+                <img class="rybl_style" src="/img/Ryb.png" style="margin-left: -1px;"> </span>
+            </p>
+          </div>
+        </button>
+
+        <button class="btn__class__taxi" id="business"> 
+          <div class="card__item" style="margin-top: 6px;">
+            <img src="/img/Такси Иконка4.png" alt="" style="margin-bottom: 3px;">
+            <p class="text__cost__class__taxi">
+              Бизнес<br> <span class="cost__class__taxi"> от 360 
+                <img class="rybl_style" src="/img/Ryb.png"> </span>
+            </p>
+          </div>
+        </button>
+
+        <button class="btn__class__taxi" id="child"> 
+          <div class="card__item" style="margin-top: 1px;">
+            <img src="/img/Такси Иконка5.png" alt="" style="margin-bottom: 3px;">
+            <p class="text__cost__class__taxi">
+              Детский<br> <span class="cost__class__taxi"> от 229 
+                <img class="rybl_style" src="/img/Ryb.png"> </span>
+            </p>
+          </div>
+        </button>
+
+        <button class="btn__class__taxi left__margin__button" id="minivan"> 
+          <div class="card__item" style="margin-top: 0px;">
+            <img src="/img/Такси Иконка6.png" alt="" style="margin-bottom: 2px;">
+            <p class="text__cost__class__taxi">
+              Минивен<br> <span class="cost__class__taxi"> от 349 
+                <img class="rybl_style" src="/img/Ryb.png"> </span>
+            </p>
+          </div>
+        </button>
+
+
+
+      </div>
+      <script>
+        let current_btn=''
+        const butts=document.querySelectorAll('.btn__class__taxi')
+        butts.forEach((btn)=>{
+          btn.addEventListener("click", () => {
+            current_btn = btn.id;
+            butts.forEach((item) => {
+              item.classList.toggle('btn__class__taxi__active', false)
+            })
+            btn.classList.toggle('btn__class__taxi__active')
+            console.log(current_btn)
+          })
+        })
+      </script>
+      <!-- Споссоб оплаты -->
+      <div class="payment__method">
+        <button class="buttom__payment__method" type='button'>
+          <span class="wrapp__button__payment">
+
+            <span class="payment__method__text">Способ оплаты</span>
+
+              <span class="positoin__type__payment">
+                <span class="cash__text">Наличиные</span>
+                <span>
+                  <img src="/img/cash_icon.png" alt="">
+                </span>
+                <!-- <div class="arrow arrow__left"></div> -->
+              </span>
+
+          </span>
+        </button>
+
+      </div>
+      <!-- Комментарий водителю -->
+      <div class="cooment__driver">
+        <div class="wrapper__cooment">
+            <div class="comment">
+              <input type="text" placeholder="Комментарий водителю..." name="locatioIIn" class="location__in__text__block commenе__input__line" onclick="FincClickComment()" required>
+            </div>
+            <div class="line__comment" id="clickLineComment">
+            </div>
+        </div>
+      </div>
+
+      <script>
+        function FincClickComment() {
+          document.getElementById("clickLineComment").classList.toggle("click__line__transform");
+        }
+      </script>
+
+      
+      <!-- Заказать другому человеку -->
+      <!-- <div class="other__person">
+        <button type="button" class="button__order__other_person">
+          <span class="other__person__text">
+            Заказать другому человеку
+          </span>
+          <div class="arrow arrow__left"></div>
+        </button>
+
+
+      </div> -->
+      <!-- Кнопка заказа -->
+      <div class="flex__button">
+        <div class="order__button">
+          <button class="button__order" type="submit" name="button_submit">
+            <div class="text__order__button">Заказать</div>
+          </button>
+        
+        </div>
+      </div>
+    </div> 
+  </form> <!-- Окончание формы-->
+  
+
+
+</body>
+</html>

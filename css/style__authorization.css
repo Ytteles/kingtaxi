@@ -1,0 +1,257 @@
+@font-face {
+    font-family: 'Jeko-Medium'; 
+    src: url(//Users/polikarpmitrofanov/Library/Fonts/Jeko-Medium);
+}
+@font-face {
+    font-family: 'Jeko-Black'; 
+    src: url(///Users/polikarpmitrofanov/Library/Fonts/Jeko-Black); 
+}
+
+body {
+    font-family: 'Jeko-Medium';
+    font-size: 18px;
+    
+    width: 1400px;
+    height: 775px;
+    
+    background: linear-gradient(251.36deg, rgba(157, 172, 226, 0.2) 0%, rgba(0, 0, 0, 0) 43.64%), linear-gradient(108.65deg, rgba(0, 0, 0, 0.3) 0%, rgba(255, 208, 87, 0.275) 0.01%, rgba(0, 0, 0, 0) 82.73%), linear-gradient(270deg, #1C2B3A 0.93%, #4D4E50 101.46%);
+    
+    background-size: cover;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+a { 
+    font-family: 'Jeko-Medium';
+    text-decoration: none; 
+    color: #F5F9FA;
+}
+
+a:hover { 
+    color: #3e3e3e; 
+}
+
+
+input {
+    background: none;
+    border: none;
+    box-sizing: border-box;
+    font-family: 'Jeko-Medium';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 78.69%;
+
+    outline: 0 !important;
+
+    padding-left: 40px;
+
+    text-align: left;
+    color: #f5f9fa;
+}
+input::-webkit-input-placeholder { 
+    color: #f5f9fa39;
+}
+
+
+.form_auth_block{
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0);
+    background-size: cover;
+}
+
+.icon__auth {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.form_auth_block_content{
+  padding-top: 15%;
+}
+.form_auth_block_head_text{
+    display: block;
+    text-align: center;
+    padding: 10px;
+    font-weight: 600;
+    background: rgba(0, 0, 0, 0);
+
+    font-family: 'Jeko-Medium';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 78.69%;
+    margin: 0px 0;
+
+    text-align: center;
+
+    color: #EEEEEE;
+}
+
+.form_auth_block label{
+    display: block;
+    text-align: center;
+    padding: 10px;
+    background: #EEEEEE;
+    opacity: 0;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.form_auth_block input{
+    width: 387px;
+    height: 59px;
+    background: linear-gradient(94.97deg, rgba(99, 104, 112, 0.4) 0.08%, rgba(57, 62, 70, 0.4) 100.08%);
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2.5px);
+    border-radius: 24px;
+    margin: 10px  50px 0; 
+    
+}
+
+  .form_auth_button{
+      display: block;
+      width: 80%;
+      margin: 0 auto;
+      margin-top: 10px;
+      border-radius: 10px;
+      height: 35px;
+      border: none;
+      cursor: pointer;
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover, 
+  input:-webkit-autofill:focus {
+    -webkit-text-fill-color: #858585;
+    -webkit-box-shadow: 0 0 0px 40rem #EEEEEE inset;
+  }
+
+  .order__button {
+    width: 387px;
+    height: 84px;
+    
+    margin: 0 50px;
+    backdrop-filter: blur(2.5px);
+    border-radius: 24px;
+
+    display: flex;
+    align-items: center;
+    
+}
+
+.button__order {
+    box-sizing: border-box;
+    width: 387px;
+    height: 59px;
+    padding: 0;
+
+    background: linear-gradient(270deg, #FFEEC6 0%, #FFD369 28.65%, #FFD369 67.71%, #FFEEC6 100%);
+    border: 1px solid #9D9D9D;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 24px;
+    
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text__order__button {
+    font-family: 'Jeko-Medium';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 78.69%;
+
+    color: #2A2D31;
+}
+.button__order:hover {
+    background: linear-gradient(270deg, #ffe3a0 0%, #ffca50 28.65%, #ffca50 67.71%, #ffe3a0 100%);
+}
+
+.link__registraation {
+    width: 500px;
+    display: flex;
+    justify-content: center;
+}
+
+.registration_text {
+    width: 200px;
+    display: block;
+    padding: 0px;
+    margin: 0px 0;
+    color: #EEEEEE;
+    font-family: 'Jeko-Medium';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 78.69%;
+    margin: 0px;
+}
+
+a:hover {
+    color: #EEEEEE;
+}
+
+
+.arrow-1 {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    width: 52px;
+    height: 27px;
+    margin-left: 10px;
+}
+.arrow-1 div {
+    position: relative;
+    top: 20px;
+    width: 50px;
+    height: 2px;
+    background-color: #EEEEEE;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+    left:0;
+    display: block;
+}
+.arrow-1 div::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 2px;
+    top: -2px;
+    right: -2px;
+    background-color: #EEEEEE;
+    transform: rotate(45deg);
+}
+.arrow-1 div::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 2px;
+    top: 2px;
+    right: -2px;
+    background-color: #EEEEEE;
+    transform: rotate(-45deg);
+}
+
+.arrow-1:hover {
+    animation: arrow-1 1s linear infinite;
+}
+
+@keyframes arrow-1 {
+    0% {
+        left:0;
+    }
+    50% {
+        left:10px;
+    }
+    100% {
+        left:0;
+    }
+}
+
+
+
+

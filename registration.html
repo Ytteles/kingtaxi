@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="Russia">
+
+<script>
+function ValidMail() {
+    var re = /^[\w-\.]+@[\w-]+\.[a-z]{2,4}$/i;
+    var myMail = document.getElementById('email').value;
+    var valid = re.test(myMail);
+    if (valid) output = 'Адрес эл. почты введен правильно!';
+    else output = 'Адрес электронной почты введен неправильно!';
+    document.getElementById('message').innerHTML = output;
+    return valid;
+}
+function ValidPhone() {
+    var re = /^[\d\+][\d\(\)\ -]{4,14}\d$/;
+    var myPhone = document.getElementById('phone').value;
+    var valid = re.test(myPhone);
+    if (valid) output = 'Номер телефона введен правильно!';
+    else output = 'Номер телефона введен неправильно!';
+    document.getElementById('message').innerHTML = document.getElementById('message').innerHTML+'<br />'+output;
+    return valid;
+}
+</script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KINGS TAXI</title>
+    <link rel="stylesheet" href="css/style__authorization.css">
+    <link rel="icon" type="image/icon" href="/img/Логовкладка.png">
+</head>
+<body>
+
+<div class="authorization">
+    <div class="icon_authorization">
+        <img src="" alt="">
+    </div>
+
+    <div class="form_auth_block">
+        <div class="form_auth_block_content">
+          <div class="icon__auth">
+            <img src="/img/icon__human__auth.png" alt="">
+          </div>
+          <p class="form_auth_block_head_text">Регистрация</p>
+          <form class="form_auth_style" action="#" method="post">
+            <input type="email" name="auth_email" placeholder="Email" required id="email" >
+            <input type="tel" class="yourPhone"  placeholder="Номер телефона"  id="phone"> 
+            <input type="password" name="reg_pass" placeholder="Пароль" id="password" required >
+            <input type="password" name="repeat_pass" placeholder="Повтортие пароль" id="repeatPassword" required >
+        
+            <div class="order__button">
+                <button class="button__order" type="submit">
+                <div class="text__order__button">Зарегистрироваться</div>
+                </button>
+            </div>
+
+            </div>
+          </form>
+
+        </div>
+      </div>
+
+ </div>
+
+</body>

@@ -1,0 +1,85 @@
+CREATE DATABASE db;
+CREATE TABLE `users` (
+    `id` int unsigned NOT NULL AUTO_INCREMENT,
+    `username` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+    `password` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+    `phone` varchar(20) UNIQUE,
+    PRIMARY KEY (`id`),
+    UNIQUE KEY `username` (`username`)
+)
+ENGINE=InnoDB
+DEFAULT CHARSET=utf8mb4
+COLLATE=utf8mb4_general_ci;
+
+
+CREATE TABLE `order` (
+    `order_id` integer unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `user_number` int unsigned,
+    `locationIn` text,
+    `locationOut` text,
+    `class_taxi` integer,
+    `comment` text,
+    `order_data` DATETIME DEFAULT CURRENT_TIMESTAMP,
+     CONSTRAINT 
+    	FOREIGN KEY (`user_number`) REFERENCES `users`(`id`)
+) ENGINE = InnoDB;
+
+#INSERT INTO `order` (`user_number`, `locationIn`, `locationOut`, `class_taxi`, `comment`) VALUES (22, '1234555', '1234555', 12345, '1234555');
+
+#INSERT INTO `order` (`user_number`, `locationIn`, `locationOut`, `class_taxi`, `comment`, `order_data`) VALUES (25, 'priv', 'otv', 2, '1234555', '2012-04-19 13:08:22');
+
+INSERT INTO `order` (`user_number`, `locationIn`, `locationOut`, `class_taxi`, `comment`, `order_data`) VALUES (26, 'priv', 'otv', 2, '1234555', '2012-04-01 13:08:22'),
+(27, 'priv', 'otv', 2, '1234555', '2012-04-19 13:08:22'),
+(25, 'priv', 'otv', 2, '1234555', '2012-04-25 13:08:22'),
+(26, 'priv', 'otv', 2, '1234555', '2012-04-19 13:08:22'),
+(28, 'priv', 'otv', 2, '1234555', '2012-04-20 13:08:22');
+
+
+<?php
+        $clauses=array();
+
+        if( isset( $_GET['f_category'] ) && !empty( $_GET['f_category'] ) ){
+            $clauses[] = "`sup_category` = '{$_GET['f_category']}'";   
+        }
+        if ( isset( $_GET['min_price'], $_GET['max_price'] ) && !empty( $_GET['min_price'] )  && !empty( $_GET['max_price'] ) ) {
+            $clauses[]="`sup_price` >= '{$_GET['min_price']}'";
+            $clauses[]="`sup_price` <= '{$_GET['max_price']}'";
+        }
+        if ( isset( $_GET['f_discount'] ) && !empty( $_GET['f_discount'] ) ){
+            $clauses[]="`sup_discount` = '{$_GET['f_discount']}'";   
+        }
+
+        $where = !empty( $clauses ) ? ' where '.implode(' and ',$clauses ) : '';
+        $sql = "SELECT * FROM `post_ads` " . $where; 
+
+        echo $sql;
+
+        if(isset($sql)){
+
+            $result = mysql_query($sql, $con1);
+            while($rows=mysql_fetch_array($result)){
+            /*display results*/
+            }
+        }
+    ?>
+
+
+
+
+<?php 
+    $con = new PDO('mysql:host=localhost;dbname=db', 'root', '');
+    $dateCond = '';
+    if (!empty($_GET['from']) && !empty($_GET['to'])) {
+        $dateCond = "`order_data` >= '{$_GET['from']}' AND `order_data` <= '{$_GET['to']}'";
+        }
+    $order = "GROUP BY `order_id`,`locationIn`, `locationOut` ORDER BY `order`.`order_id` ASC"
+    $sql = "SELECT `order_data`, `order_id`, `locationIn`, `locationOut`
+    FROM `order` WHERE {$dateCond} {$order} ";
+
+    $stmt = $con->prepare($sql);
+    $stmt->execute();
+    $arr = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?> 
+
+
+SELECT *  FROM `order` WHERE DATE(`order_data`) >= '2011-04-01' AND DATE(`order_data`) <= '2012-04-10' AND `order_id`, `locationIn`,`locationOut`, `class_taxi`, `user_number`, `user_number`;

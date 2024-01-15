@@ -1,0 +1,545 @@
+@font-face {
+    font-family: 'Jeko-Medium'; 
+    src: url(//Users/polikarpmitrofanov/Library/Fonts/Jeko-Medium);
+}
+@font-face {
+    font-family: 'Jeko-Black'; 
+    src: url(///Users/polikarpmitrofanov/Library/Fonts/Jeko-Black); 
+}
+
+body {
+    font-family: 'Jeko-Medium';
+    font-size: 18px;
+    margin: 20px;
+
+    background: url("/img/Главная такси.png") no-repeat center center fixed;
+    background-size: cover;
+}
+
+nav {
+    display: block; 
+   } 
+
+.telephone {
+    font-family: 'Jeko-Black';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 78.69%;
+/* or 13px */
+    padding-left: 5%;
+    width: 240px;
+    letter-spacing: -0.02em;
+    color: #F5F9FA; 
+}
+
+.header__nav {
+    margin: auto 0;
+}
+.header__menu { 
+    background: linear-gradient(94.97deg, rgba(34, 40, 49, 0.4) 0.08%, rgba(6, 12, 21, 0.4) 100.08%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 7px 7px 21px rgba(17, 17, 17, 0.95);
+    backdrop-filter: blur(2.5px);
+/* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 24px;
+    max-width: 1360px;
+    width: 100%;
+    height: 78px;
+
+    padding: 0 20px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.menu__link{
+    font-size: 17px;
+    font-weight: 700;
+    color: #F5F9FA;
+}
+
+.menu__item {
+    display: block;
+    margin: auto 0;
+}
+
+ul { 
+    list-style: none;
+}
+
+a { 
+    font-family: 'Jeko-Medium';
+    text-decoration: none; 
+    color: #F5F9FA;
+}
+
+a:hover { 
+    color: #3e3e3e; 
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+button.button__item {
+    width: 157px;
+    height: 49px;
+    
+    background: linear-gradient(94.97deg, rgba(34, 40, 49, 0.4) 0.08%, rgba(6, 12, 21, 0.4) 100.08%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 7px 7px 21px rgba(17, 17, 17, 0.95);
+    backdrop-filter: blur(2.5px);
+/* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 10px;
+}
+
+.button__item:hover {
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 8px 8px 21px rgba(17, 17, 17, 0.95);
+
+}
+
+.button__item:hover a{
+    color: #3e3e3e; 
+}
+
+.button__item:hover > .input__logo, .input__text{
+    cursor: pointer;
+}
+
+.menu__logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.logo__item {
+    display: block;
+    margin: auto 0;
+}
+.button__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.input__logo {
+    display: block;
+    margin: auto 0;
+    margin-left: 15px;
+}
+
+.input__text {
+    margin-right: 50px;
+    display: block;
+    margin: auto 0;
+    margin-right: 25px;
+
+    font-family: 'Jeko-Medium';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+ .ride__info {
+    width: 387px;
+    height: 550px;
+    background: linear-gradient(94.97deg, rgba(34, 40, 49, 0.4) 0.08%, rgba(6, 12, 21, 0.4) 100.08%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 7px 7px 21px rgba(17, 17, 17, 0.95);
+    backdrop-filter: blur(2.5px);
+/* Note: backdrop-filter has minimal browser support */
+    border-radius: 24px;
+    display: flex;
+    align-content: space-between;
+    flex-wrap: wrap;
+}
+.location {
+    width: 387px;
+    height: 90px;
+    
+    background: linear-gradient(94.97deg, rgba(99, 104, 112, 0.4) 0.08%, rgba(57, 62, 70, 0.4) 100.08%);
+    box-shadow: 7px 7px 21px rgba(17, 17, 17, 0.95);
+    backdrop-filter: blur(2.5px);
+    border-radius: 24px;
+
+    padding: 10px 15px 20px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+}
+
+.icon__location_out {
+    max-width: 40px;
+    display: block;
+}
+
+.icon__location_in {
+    max-width: 40px;
+    display: block;
+}
+
+.location__in {
+    display: flex;
+    align-items: center;
+
+}
+
+.form__location__in {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: flex-end
+}
+
+.location__in__text {
+    width: 310px;
+    height: 45px;
+    
+    display: block;
+}
+
+input {
+    background: none;
+    border: none;
+    box-sizing: border-box;
+    font-family: 'Jeko-Medium';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 78.69%;
+
+    outline: 0 !important;
+/* or 14px */
+
+    text-align: center;
+    color: #f5f9fa;
+}
+input::-webkit-input-placeholder { 
+    color: #f5f9fa39;
+}
+
+.location__in__text__block {
+    width: 310px;
+    height: 45px;
+    text-align: left;
+    text-indent: 13px;
+    padding: 0;
+}
+
+.location__out {
+    display: flex;
+    align-items: center;
+}
+
+.form__location__out {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: flex-end
+}
+
+.location__out__text {
+    width: 310px;
+    height: 45px;
+
+    display: block;
+}
+
+.line__location1 {
+    width: 310px;
+    height: 2px;
+    background-color: #F5F9FA;
+
+    display: block;
+}
+
+.line__location2 {
+    width: 310px;
+    height: 2px;
+    background-color: #F5F9FA;
+
+    display: block;
+}
+
+.payment__method {
+    width: 387px;
+    height: 59px;
+
+    background: linear-gradient(94.97deg, rgba(99, 104, 112, 0.4) 0.08%, rgba(57, 62, 70, 0.4) 100.08%);
+    box-shadow: 7px 7px 21px rgba(17, 17, 17, 0.95);
+    backdrop-filter: blur(2.5px);
+    border-radius: 24px;
+
+    display: block;
+}
+
+.buttom__payment__method {
+    background: rgba(0, 0, 0, 0);
+    max-height: 59px;
+    max-width: 387px - 30px;
+    padding: 4px 15px;
+}
+
+.wrapp__button__payment{
+    width: 357px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.payment__method__text {
+    font-family: 'Jeko-Medium';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 78.69%;
+
+    text-align: center;
+
+    color: #F5F9FA;
+}
+
+.positoin__type__payment {
+    width: 170px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.cash__text {
+    font-family: 'Jeko-Medium';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 78.69%;
+    /* identical to box height, or 13px */
+
+    text-align: center;
+
+    color: #6A6A6A;
+}
+
+.arrow {
+    width: 12px;
+    height: 12px;
+    border-top: 1px solid #B6B6B6;
+    border-right: 1px solid #B6B6B6;
+}    
+
+.arrow__left {
+    transform: rotate(45deg);
+}
+
+
+.cooment__driver {
+    width: 387px;
+    height: 59px;
+    background: linear-gradient(94.97deg, rgba(99, 104, 112, 0.4) 0.08%, rgba(57, 62, 70, 0.4) 100.08%);
+    box-shadow: 7px 7px 21px rgba(17, 17, 17, 0.95);
+    backdrop-filter: blur(2.5px);
+
+    border-radius: 24px;
+}
+
+.wrapper__cooment {
+    padding: 9px 15px 7px;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+/* .comment {
+
+} */
+
+.commenе__input__line {
+    width: 357px;
+    height: 40px;
+}
+
+
+.line__comment {
+    width: 357px;
+    height: 2px;
+    background-color: #F5F9FA;
+
+    display: block;
+}
+
+.click__line__transform {
+
+    background-color: #FFD369;
+    height: 2px;
+    display: block;
+}
+
+.other__person {
+    width: 387px;
+    height: 60px;
+
+    background: linear-gradient(94.97deg, rgba(99, 104, 112, 0.4) 0.08%, rgba(57, 62, 70, 0.4) 100.08%);
+    box-shadow: 7px 7px 21px rgba(17, 17, 17, 0.95);
+    backdrop-filter: blur(2.5px);
+    border-radius: 24px;
+
+    display: block;
+}
+
+.button__order__other_person {
+    padding: 0 15px;
+    width: 387px;
+    height: 60;
+    background-color: rgba(0,0,0,0);
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.other__person__text {
+    font-family: 'Jeko-Medium';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 78.69%;
+    /* or 14px */
+    
+    text-align: center;
+    
+    color: #F5F9FA;
+}
+
+
+
+.flex__button {
+    display: block;
+}
+.order__button {
+    width: 387px;
+    height: 84px;
+    
+    background: linear-gradient(94.97deg, rgba(99, 104, 112, 0.4) 0.08%, rgba(57, 62, 70, 0.4) 100.08%);
+    box-shadow: 7px 7px 21px rgba(17, 17, 17, 0.95);
+    backdrop-filter: blur(2.5px);
+    border-radius: 24px;
+
+    display: flex;
+    align-items: center;
+    
+}
+
+.button__order {
+    box-sizing: border-box;
+    width: 357px;
+    height: 55px;
+
+    background: linear-gradient(270deg, #FFEEC6 0%, #FFD369 28.65%, #FFD369 67.71%, #FFEEC6 100%);
+    border: 1px solid #9D9D9D;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 24px;
+    
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text__order__button {
+    font-family: 'Jeko-Medium';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 78.69%;
+
+    color: #2A2D31;
+}
+
+.button__order:hover {
+    background: linear-gradient(270deg, #ffe3a0 0%, #ffca50 28.65%, #ffca50 67.71%, #ffe3a0 100%);
+}
+
+.class__taxi {
+    width: 387px;
+    max-width: 387px;
+    height: 176px;
+    background: linear-gradient(94.97deg, rgba(99, 104, 112, 0.4) 0.08%, rgba(57, 62, 70, 0.4) 100.08%);
+    box-shadow: 7px 7px 21px rgba(17, 17, 17, 0.95);
+    backdrop-filter: blur(2.5px);
+    border-radius: 24px;
+
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+
+.btn__class__taxi {
+    width: 116px;
+    height: 78px;
+    max-height: 78px;
+
+    padding: 0;
+    margin: 0 -1px 4px 0; 
+        
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 7px 7px 21px rgba(17, 17, 17, 0.95);
+    backdrop-filter: blur(10px);
+    background: linear-gradient(94.97deg, rgba(191, 194, 198, 0.4) 0.08%, rgba(127, 131, 138, 0.4) 100.08%),
+    linear-gradient(282.74deg, #F4CA63 0%, #585858 90.78%),
+    linear-gradient(246deg, #FFD369 0%, rgba(0, 0, 0, 0) 95.24%),
+    linear-gradient(270deg, rgba(255, 211, 105, 0.4) 0%, rgba(34, 40, 49, 0.4) 100%);
+
+    background-image: url("/img/Fon_Class_Taxi.png");
+    border-radius: 24px;
+
+}
+
+
+
+.card__item { 
+    width: 104px;
+    height: 76px;
+    max-height: 76px;
+
+    margin-left: 12px;
+    margin-top: 7px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    
+}
+
+.text__cost__class__taxi {
+    font-family: 'Jeko-Medium';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 90%;
+
+    color: #F5F9FA;
+    margin: 0;
+    text-align: left;
+    line-height: 1.1;
+}
+
+.cost__class__taxi {
+    font-size: 16px;
+    line-height: 90%;
+
+
+}
+
+.rybl_style {
+    margin-left: 2px;
+    width: 7.3%; 
+    position: absolute;
+    left: 63px;
+    top: 51px;
+}
